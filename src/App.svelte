@@ -7,7 +7,7 @@
     <div class="col">
       <form>
         <input />
-        <input type="checkbox"/>
+        <input type="checkbox" />
       </form>
       <p>Hello {name.toUpperCase()}!</p>
       <p>
@@ -25,7 +25,9 @@
 
   $: if (pastedText !== null) {
     let text = pastedText;
-    pastedTexted = null;    // we want a lint error on this line!!
+    pastedText = null;
     alert(text);
+    // todo: use the pasted text to search for a bookmark, or add a new bookmark if text is url and the site is
+    // not already bookmarked
   }
 </script>
