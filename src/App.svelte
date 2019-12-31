@@ -5,7 +5,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <p>Hello {name}!</p>
+      <form>
+        <input />
+        <input type="checkbox"/>
+      </form>
+      <p>Hello {name.toUpperCase()}!</p>
       <p>
         Visit the
         <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
@@ -17,4 +21,11 @@
 
 <script>
   export let name = "";
+  export let pastedText = null;
+
+  $: if (pastedText !== null) {
+    let text = pastedText;
+    pastedTexted = null;    // we want a lint error on this line!!
+    alert(text);
+  }
 </script>
