@@ -1,3 +1,4 @@
+
 import App from './App.svelte';
 import LogOnBtn from "./LogOnButton.svelte";
 
@@ -12,4 +13,4 @@ const logOnBtn = new LogOnBtn({
 	target: document.querySelector('#logonBtn')
 });
 
-//export default app;   -- why?
+export { app, logOnBtn };
