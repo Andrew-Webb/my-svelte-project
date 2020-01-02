@@ -2,25 +2,21 @@
     Andrew Webb 2019
 -->
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <form>
-        <input />
-        <input type="checkbox" />
-      </form>
-      <p>Hello {name.toUpperCase()}!</p>
-      <p>
-        Visit the
-        <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-        to learn how to build Svelte apps.
-      </p>
-    </div>
-  </div>
+<div class="container-fluid">
+  <NavBar bind:pageComponent="{pageComponent}" />
+  <svelte:component this="{pageComponent}" />
 </div>
 
 <script>
-  export let name = "";
+  import NavBar from "./NavBar.svelte";
+
+  import List from "./pages/List.svelte";
+
+  // set the first page
+  let pageComponent = List;
+
+
+  // text pasted anywhere on the window
   export let pastedText = null;
 
   $: if (pastedText !== null) {

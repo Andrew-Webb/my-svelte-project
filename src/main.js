@@ -3,10 +3,7 @@ import App from './App.svelte';
 import LogOnBtn from "./LogOnButton.svelte";
 
 const app = new App({
-    target: document.querySelector('#root'),
-    props: {
-        name: 'andrew'
-    }
+    target: document.querySelector('#app')
 });
 
 const logOnBtn = new LogOnBtn({
@@ -36,6 +33,6 @@ window.addEventListener('paste', (event) => {
 
     event.stopPropagation();
     app.$set({ pastedText: pastedText });
-});    
+});
 
 export { app, logOnBtn };
