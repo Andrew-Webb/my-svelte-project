@@ -21,7 +21,7 @@
             "processor": "svelte3/svelte3"
         }
     ],
-    "ignorePatterns": ["build/"],
+    "ignorePatterns": ["build/", "temp/"],
     "rules": {
         "no-var": "error",
         "semi": "error",

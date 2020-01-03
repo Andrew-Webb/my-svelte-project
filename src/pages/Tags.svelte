@@ -1,7 +1,7 @@
 <!-- -->
 
 <div class="row">
-  <div class="col-md">
-    <p>tags page</p>
-  </div>
+    <div class="col-md">
+        <p>tags page</p>
+    </div>
 </div>
