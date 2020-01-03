@@ -4,13 +4,13 @@
   <div class="col">
     <div class="text-center">
       <nav>
-        <button type="button" class="btn btn-light" on:click="{() => click('/list')}">list</button>
-        <button type="button" class="btn btn-light" on:click="{() => click('/tags')}">tags</button>
-        <button type="button" class="btn btn-light" on:click="{() => click('/folders')}">folders</button>
-        <button type="button" class="btn btn-light" on:click="{() => click('/add')}">add</button>
-        <button type="button" class="btn btn-light" on:click="{() => click('/search')}">search</button>
-        <button type="button" class="btn btn-light" on:click="{() => click('/settings')}">settings</button>
-        <button type="button" class="btn btn-light" on:click="{() => click('/about')}">about</button>
+        <a class="btn btn-light" role="button" href="/list">list</a>
+        <a class="btn btn-light" role="button" href="/tags">tags</a>
+        <a class="btn btn-light" role="button" href="/folders">folders</a>
+        <a class="btn btn-light" role="button" href="/add">add</a>
+        <a class="btn btn-light" role="button" href="/search">search</a>
+        <a class="btn btn-light" role="button" href="/settings">settings</a>
+        <a class="btn btn-light" role="button" href="/about">about</a>
       </nav>
     </div>
   </div>
@@ -29,7 +29,6 @@
 
   export let pageComponent;
 
-  // set up the router
   router("/", () => router.redirect("/list"));
   router("/list", () => { pageComponent = List; });
   router("/tags", () => { pageComponent = Tags; });
@@ -40,8 +39,4 @@
   router("/about", () => { pageComponent = About; });
   router('*', () => router.redirect("/list"));
   router.start();
-
-  function click(route) {
-    window.location.pathname = route;
-  }
 </script>
