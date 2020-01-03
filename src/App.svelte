@@ -4,6 +4,7 @@
 
 <div class="container-fluid">
     <NavBar bind:pageComponent="{pageComponent}" />
+    <br />
     <svelte:component this="{pageComponent}" />
 </div>
 
